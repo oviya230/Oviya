@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main() {
+ int accountNumber; // Integer for account number
+ float initialBalance; // Float for initial balance
+ double depositAmount, withdrawalAmount; // Double for larger amounts (e.g., transactions)
+ char accountType; // Character for account type (S = Savings, C = Checking)
+ float finalBalance; // Float for final balance
+ // Step 1: Input account details
+ printf("Enter your account number: ");
+ scanf("%d", &accountNumber);
+ printf("Enter your account type (S for Savings, C for Checking): ");
+ scanf(" %c", &accountType);
+ printf("Enter the initial balance: ");
+ scanf("%f", &initialBalance);
+ // Step 2: Perform a deposit
+ printf("Enter the deposit amount: ");
+ scanf("%lf", &depositAmount); // Using double for deposit
+ // Step 3: Perform a withdrawal
+ printf("Enter the withdrawal amount: ");
+ scanf("%lf", &withdrawalAmount); // Using double for withdrawal
+ // Step 4: Calculate final balance
+ finalBalance = initialBalance + (float)depositAmount - (float)withdrawalAmount;
+printf("Initial Balance: %.2f\n", initialBalance);
+ printf("Deposit Amount: %.2f\n", depositAmount);
+ printf("Withdrawal Amount: %.2f\n", withdrawalAmount);
+ printf("Final Balance: %.2f\n", finalBalance);
+ // Step 5: Check for overdrawn account
+ if (finalBalance < 0) {
+ printf("\nWarning: Your account is overdrawn!\n");
+ } else {
+ printf("\nYour account balance is positive.\n");
+ }
+ return 0;
+}
