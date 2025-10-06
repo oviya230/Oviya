@@ -1,0 +1,27 @@
+
+
+#include <stdio.h>
+
+int main() {
+    int base, exponent;
+    long long result = 1; // To handle large numbers
+    int i = 0;
+
+    // Input base and exponent
+    printf("Enter base: ");
+    scanf("%d", &base);
+
+    printf("Enter exponent: ");
+    scanf("%d", &exponent);
+
+    // Calculate power using while loop
+    while (i < exponent) {
+        result = result * base;
+        i++;
+    }
+
+    printf("%d^%d = %lld\n", base, exponent, result);
+
+    return 0;
+}
+
