@@ -1,0 +1,25 @@
+
+
+#include <stdio.h>
+
+int main() {
+    int i, j, rows;
+    char ch;
+
+    // Input number of rows
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+
+    // Print half pyramid of alphabets
+    for(i = 1; i <= rows; i++) {
+        ch = 'A'; // Start with 'A' in each row
+        for(j = 1; j <= i; j++) {
+            printf("%c ", ch);
+            ch++;
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
