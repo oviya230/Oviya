@@ -1,0 +1,7 @@
+#include <stdio.h>
+#include <string.h>
+
+// Function to convert binary string to decimal
+int binaryToDecimal(char bin[]) {
+    int decimal = 0, i, length = strlen(bin);
+    for (i = 0; i < length;
