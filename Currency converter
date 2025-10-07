@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    float inr, converted;
+    int choice;
+
+    printf("Enter amount in Indian Rupees (INR): ");
+    scanf("%f", &inr);
+
+    printf("\nChoose currency to convert into:\n");
+    printf("1. US Dollar (USD)\n");
+    printf("2. Euro (EUR)\n");
+    printf("3. British Pound (GBP)\n");
+    printf("4. Japanese Yen (JPY)\n");
+    printf("Enter your choice (1-4): ");
+    scanf("%d", &choice);
+
+    switch (choice) {
+        case 1:
+            converted = inr / 83.0;   // Example rate: 1 USD = ₹83
+            printf("%.2f INR = %.2f USD\n", inr, converted);
+            break;
+        case 2:
+            converted = inr / 90.0;   // Example rate: 1 EUR = ₹90
+            printf("%.2f INR = %.2f EUR\n", inr, converted);
+            break;
+        case 3:
+            converted = inr / 104.0;  // Example rate: 1 GBP = ₹104
+            printf("%.2f INR = %.2f GBP\n", inr, converted);
+            break;
+        case 4:
+            converted = inr * 1.78;   // Example rate: 1 INR = 1.78 JPY
+            printf("%.2f INR = %.2f JPY\n", inr, converted);
+            break;
+        default:
+            printf("Invalid choice!\n");
+    }
+
+    return 0;
+}
