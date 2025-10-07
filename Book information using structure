@@ -1,0 +1,38 @@
+
+
+#include <stdio.h>
+
+// Define a structure to hold book information
+struct Book {
+    char title[50];
+    char author[50];
+    float price;
+};
+
+// Function to input book details
+void inputBookDetails(struct Book *b) {
+    printf("Enter book title: ");
+    scanf(" %[^\n]", b->title);  // Use %[^\n] to read strings with spaces
+    printf("Enter author name: ");
+    scanf(" %[^\n]", b->author);
+    printf("Enter price: ");
+    scanf("%f", &b->price);
+}
+
+// Function to display book details
+void displayBookDetails(struct Book b) {
+    printf("\nBook Title: %s\n", b.title);
+    printf("Author: %s\n", b.author);
+    printf("Price: $%.2f\n", b.price);
+}
+
+int main() {
+    struct Book myBook;
+
+    // Input book details
+    inputBookDetails(&myBook);
+
+    // Display book details
+    displayBookDetails(myBook);
+    return 0;
+}
