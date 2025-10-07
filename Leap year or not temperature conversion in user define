@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+// Function to check leap year
+int isLeapYear(int year) {
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+        return 1;
+    else
+        return 0;
+}
+
+// Function to convert Celsius to Fahrenheit
+float celsiusToFahrenheit(float celsius) {
+    return (celsius * 9/5) + 32;
+}
+
+// Function to convert Fahrenheit to Celsius
+float fahrenheitToCelsius(float fahrenheit) {
+    return (fahrenheit - 32) * 5/9;
+}
+
+int main() {
+    int choice;
+
+    printf("Choose an operation:\n");
+    printf("1. Check Leap Year\n");
+    printf("2. Temperature Conversion\n");
+    printf("Enter your choice (1 or 2): ");
+    scanf("%d", &choice);
+
+    if (choice == 1) {
+        int year;
+        printf("Enter a year: ");
+        scanf("%d", &year);
+
+        if (isLeapYear(year))
+            printf("%d is a Leap Year.\n", year);
+        else
+            printf("%d is not a Leap Year.\n", year);
+
+    } else if (choice == 2) {
+        int tempChoice;
+        float temp;
+
+        printf("Choose conversion type:\n");
+        printf("1. Celsius to Fahrenheit\n");
+        printf("2. Fahrenheit to Celsius\n");
+        printf("Enter your choice (1 or 2): ");
+        scanf("%d", &tempChoice);
+
+        if (temp
