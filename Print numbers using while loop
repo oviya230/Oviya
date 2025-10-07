@@ -1,0 +1,14 @@
+
+#include <stdio.h>
+
+int main() {
+    printf("Using while loop:\n");
+    int i = 1;  // Step 1: Initialize the counter variable
+    // Step 2: while loop to print numbers from 1 to 10
+    while (i <= 10) {
+        printf("%d ", i);
+        i++;  // Step 3: Increment the counter variable
+    }
+    printf("\n");
+    return 0;
+}
