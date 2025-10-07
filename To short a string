@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100], temp;
+    int i, j, length;
+
+    printf("Enter a string: ");
+    gets(str);  // Or use fgets(str, sizeof(str), stdin) for safer input
+
+    length = strlen(str);
+
+    // Sorting using simple bubble sort
+    for (i = 0; i < length - 1; i++) {
+        for (j = i + 1; j < length; j++) {
+            if (str[i] > str[j]) {
+                // Swap characters
+                temp = str[i];
+                str[i] = str[j];
+                str[j] = temp;
+            }
+        }
+    }
+
+    printf("Sorted string: %s\n", str);
+
+    return 0;
+}
